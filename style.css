@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color:#F7DC6F;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+header {
+    position: relative;
+    height: calc(30vh + 3rem); /* Suma la altura del video y la del menú */
+    overflow: hidden;
+}
+
+#header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh; /* Establece la mitad del alto del encabezado para el video */
+    object-fit: cover;
+    z-index: -1; /* Asegura que el video esté detrás del menú */
+}
+
+.menu-container {
+    position: absolute;
+    bottom: 0; /* Alinea el "listón" del menú en la parte inferior */
+    left: 0;
+    width: 100%;
+    height: 3rem; /* Altura del "listón" del menú */
+    background-color:#F1C40F; /* Color de fondo del menú */
+}
+
+.menu {
+    display: flex; /* Hace que los elementos del menú estén en una línea horizontal */
+    justify-content:flex-end; /* Alinea los elementos del menú al final */
+    align-items: center; /* Centra verticalmente los elementos del menú */
+    height: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hace que los elementos de la lista estén en una línea horizontal */
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffc107;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%; /* Ajusta la posición vertical del título */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el título horizontal y verticalmente */
+    color: #fff; /* Color del título */
+    font-size: 3rem; /* Tamaño de fuente del título */
+    z-index: 1; /* Asegura que el título esté delante del video */
+}
+
+.imagenes-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.imagenes-container img{
+    width: 300px; /* Ajusta el ancho de las imágenes */
+    max-width: 100%;
+    height: auto;
+    border-radius: 40px;
+    margin: 0 40px; /* Ajusta el espacio horizontal entre las imágenes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    image-rendering: crisp-edges; /* Ajusta la nitidez de las imágenes */
+    -webkit-image-rendering: -webkit-optimize-contrast; 
+}
+.about,
+.values,
+.contact {
+    width: 100%;
+}
+
+.about h2,
+.values h2,
+.contact h2 {
+    font-size: 2.5rem;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align:start; /* Alinear el texto al centro */
+}
+
+.about p,
+.values p,
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+    text-align:justify; /* Alinear el texto al centro */
+}
+.about img{
+    width: 390px; /* Ajusta el ancho de las imágenes */
+    max-width: 100%;
+    height: 250px; /* Establece una altura fija para las imágenes */
+    border-radius: 30px;
+    margin: 0 60px; /* Ajusta el espacio horizontal entre las imágenes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    image-rendering: crisp-edges; /* Ajusta la nitidez de las imágenes */
+    -webkit-image-rendering: -webkit-optimize-contrast; 
+}
+
+.values-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.value-item {
+    flex: 0 0 calc(50% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.value-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.value-item p {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.zumbido-cont {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.imagen-zumbido,
+.video-zumbido {
+    width: 45%; /* Ajusta el ancho de las imágenes y videos */
+    max-width: 100%;
+    height: auto;
+    border-radius: 40px;
+    margin: 0 2.5%; /* Ajusta el espacio horizontal entre las imágenes y videos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los videos dentro de la sección Zumbido Multimedia */
+.video-zumbido video {
+    width: 100%; /* Ajusta el ancho del video al contenedor */
+    height: auto;
+    border-radius: 40px;
+    object-fit: cover; /* Ajusta el video dentro del contenedor manteniendo su relación de aspecto */
+}
+
+/* Estilos para las imágenes dentro de la sección Zumbido Multimedia */
+.imagen-zumbido img {
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: 220px;
+    border-radius: 40px;
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor manteniendo su relación de aspecto */
+}
+
+.contact ul {
+    list-style: none;
+    text-align:left; /* Alinear el texto al centro */
+}
+
+.contact ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.footer-text {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-text p {
+    font-size: 1rem;
+}
